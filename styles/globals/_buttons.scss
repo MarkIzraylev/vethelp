@@ -1,0 +1,21 @@
+@use "gaps" as g;
+@use "colors" as c;
+@use "speeds" as s;
+
+%button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  cursor: pointer;
+  &:hover {
+    background-color: light-dark(lighten(c.$green,53%), darken(c.$green, 30%));
+    transition: s.$fast;
+  }
+}
+
+%circleButton {
+  @extend %button;
+
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}

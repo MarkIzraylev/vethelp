@@ -1,0 +1,95 @@
+@use "globals";
+@use "components";
+
+p {
+  /*@media screen and (max-width: $small) {
+        color: red;
+    }
+
+    @media screen and (min-width: $small) and (max-width: $medium) {
+        color: blue;
+    }
+
+    @media screen and (min-width: $small) and (max-width: $medium) {
+        color: blue;
+    }
+
+    @media screen and (min-width: $small) and (max-width: $medium) {
+        color: blue;
+    }*/
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.blur-load img {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.blur-load.loaded > img {
+  opacity: 1 !important;
+  z-index: 10;
+}
+
+.blur-load::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  //animation: pulse 1.5s infinite;
+  animation: 2s linear infinite placeHolderShimmer;
+
+  background: linear-gradient(
+    to right,
+    rgba(238, 238, 238, 0.1) 8%,
+    rgba(168, 168, 168, 0.5) 18%,
+    rgba(238, 238, 238, 0.1) 33%
+  );
+  background-size: 200%;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.blur-load {
+  position: relative;
+}
+
+/*
+:root {
+  color-scheme: dark;
+}*/
+
+.hidden {
+  display: none !important;
+}

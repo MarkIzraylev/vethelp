@@ -1,0 +1,7 @@
+@use '../globals' as *;
+
+.notification {
+    border-radius: $regularGap;
+    border: 1px solid $green;
+    padding: $regularGap $largeGap;
+}

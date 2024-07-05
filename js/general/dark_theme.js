@@ -1,0 +1,1 @@
+//$(':root').css('color-scheme', 'dark')

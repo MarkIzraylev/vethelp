@@ -1,0 +1,78 @@
+@use "../globals" as *;
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  padding: $largeGap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //border-top: 1px solid $green;
+  margin: 0;
+  margin-top: auto !important;
+  //padding-top: calc($largeGap * 5);
+  @include bp-down($largest) {
+    //padding-top: $largeGap;
+  }
+
+  &__start-block {
+    display: flex;
+    align-items: center;
+    gap: $smallGap;
+    &__icon {
+      width: $largeGap;
+      display: inline-block;
+    }
+  }
+
+  &__middle-block {
+    flex-direction: column;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: $regularGap $largeGap;
+    margin-inline: $largeGap;
+
+    @include bp-down($large) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include bp-down($medium) {
+      margin-inline: 0;
+      margin-block: $largeGap;
+    }
+
+    @include bp-up($large) {
+      display: flex !important;
+      flex-direction: row;
+    }
+
+    justify-content: center;
+
+    a {
+      text-wrap: nowrap;
+    }
+  }
+
+  &__end-block {
+    //flex-direction: column;
+
+    @include bp-up($medium) {
+      //display: flex !important;
+    }
+  }
+
+  @include bp-down($medium) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $regularGap;
+  }
+
+  
+
+}

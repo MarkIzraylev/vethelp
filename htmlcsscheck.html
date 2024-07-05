@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ВетХелп</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="img/icons/paw_print.png" type="image/x-icon">
+    
+</head>
+<body>
+    <script src="js/libs/jquery-3.7.1.min.js"></script>
+
+    <!--<div class="header">
+        <div class="logo-block"><img src="img/icons/paw_print.png" alt="Логотип" class="logo-block__icon">ВетХелп</div>
+        <div class="middle-block">
+            <a href="./#services" class="header-link">Услуги</a>
+            <a href="./#specialists" class="header-link">Специалисты</a>
+            <a href="./#appointment_form" class="header-link">Запись на приём и контакты</a>
+            <a href="./#about_us" class="header-link">О нас</a>
+        </div>
+        <div class="account-block">
+            <a href="#" class="header-link">Войти</a>
+        </div>
+        <div class="hamburger-block">
+            <button id="hamburger">☰</button>
+        </div>
+    </div>-->
+    <header class="header">
+        <div class="logo-block"><img src="/vethelp/img/icons/paw_print.png" alt="Логотип" class="logo-block__icon">
+            ВетХелп
+        </div>
+    <nav class="middle-block">
+        <a href="./#services" class="header-link">Услуги</a>
+        <a href="./#specialists" class="header-link">Специалисты</a>
+        <a href="./#appointment_form" class="header-link">Запись на приём и контакты</a>
+        <a href="./#about_us" class="header-link">О нас</a>
+            </nav>
+    <div class="account-block">
+                <a href="./login.php" class="header-link">Войти</a>
+            </div>
+    <div class="hamburger-block">
+        <button id="hamburger">☰</button>
+    </div>
+</header>
+
+<script src="./js/general/hamburger.js"></script>
+    <div class="hero">
+        <div class="hero__start">
+            <div class="hero__start__wrapper">
+                                <h1 class="hero__start__wrapper__heading">Добро пожаловать в ВетХелп!</h1>
+                <p class="hero__start__wrapper--paragraph">Ветеринарная клиника в Ярославле: ул. Весенняя, дом 1.</p>
+                <div class="hero__start__wrapper__buttons-block">
+                    <a href="./#appointment_form" class="hero__start__wrapper__buttons-block__button">Запись на приём</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="hero__end">
+            <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/cats_and_dogs_small.jpg');">
+                <img src="img/pets2.png" alt="">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section-wrapper" id="about_us">
+        <section class="hero" style="height: auto; min-height: auto;">
+        
+            <div class="hero__end">
+                <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/cat_and_dog_small.jpg');">
+                    <img src="img/cat_and_dog.jpg" alt="Доктор" loading="lazy">
+    
+                </div>
+            </div>
+            <div class="hero__start">
+                <div class="hero__start__wrapper">
+                    <h2 class="hero__start__wrapper__heading">Почему мы?</h2>
+                    <p class="hero__start__wrapper--paragraph">
+                        В нашей клинике осуществляется приём врачей общей практики, а также специалистов в узкопрофильных областях:
+                        <ul class="list--2col">
+                            <li>Стоматология</li>
+                            <li>Офтальмология</li>
+                            <li>Гастроэнтерология</li>
+                            <li>Дерматология</li>
+                            <li>Физическая реабилитация</li>
+                            <li>Ортопедия</li>
+                            <li>Кардиология</li>
+                            <li>Нефрология</li>
+                            <li>Родентология</li>
+                        </ul>
+                    </p>
+                    <p class="hero__start__wrapper--paragraph">
+                        Также проводим курс реабилитации и восстановления животных после болезни.
+                    ‍</p>
+                    <p class="hero__start__wrapper--paragraph">
+                        Все процедуры проводятся квалифицированными специалистами.<br>
+                    </p>
+                    <p class="hero__start__wrapper--paragraph">
+                        В нашей клинике есть стационар для домашних животных.
+                    </p>
+                
+                </div>
+                
+            </div>
+            
+    
+        </section>
+    </div>
+
+    
+    <span id="services"></span>
+
+    <section class="section">
+        <div class="section__info">
+            <h2 class="section__info__heading">Услуги клиники</h2>
+            <p class="section__info__paragraph">Мы оказываем полный спектр лечебно-диагностических услуг. К каждому питомцу индивидуальный подход.</p>
+        </div>
+        <div class="section__buttons">
+            <div class="section__buttons__switcher">
+                <button for-moving-block-id="services" move-direction="right"><</button>
+            </div>
+            <div class="section__buttons__buttons">
+                <div class="section__buttons__buttons__moving-block" moving-block-id="services">
+                    
+                    <button class="selected">Консультации</button><button >Лечебные процедуры</button>                </div>
+            </div>
+            <div class="section__buttons__switcher">
+                <button for-moving-block-id="services" move-direction="left">></button>
+            </div>
+        </div>
+        <div class="section__changing-content">
+
+                <div class="section__main-block--fr1-2">
+    <div class="section__main-block__block">
+        <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/services/doctor1_small.jpeg');">
+            <img src="img/services/doctor1.jpeg" alt="Обложка вида услуг" loading="lazy">
+        </div>
+    </div>
+    <div class="section__main-block__block">
+        <div class="section__main-block__block__wrapper">
+            <table>
+                <tr>
+                    <th>Услуга</th>
+                    <th>Стоимость</th>
+                </tr>
+                
+                            <tr>
+                                <td>Консультация врача общей практики</td>
+                                <td>900</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Консультация узкого специалиста</td>
+                                <td>1000</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Повторный приём узкого специалиста</td>
+                                <td>800</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Повторный приём врача общей практики</td>
+                                <td>700</td>
+                            </tr>
+                        
+            </table>
+        </div>
+    </div>
+</div>    <div class="section__main-block--fr1-2">
+    <div class="section__main-block__block">
+        <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/services/injection_small.jpg');">
+            <img src="img/services/injection.jpg" alt="Обложка вида услуг" loading="lazy">
+        </div>
+    </div>
+    <div class="section__main-block__block">
+        <div class="section__main-block__block__wrapper">
+            <table>
+                <tr>
+                    <th>Услуга</th>
+                    <th>Стоимость</th>
+                </tr>
+                
+                            <tr>
+                                <td>Введение лекарственных препаратов через рот</td>
+                                <td>50</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Внутримышечное, подкожное введение</td>
+                                <td>50</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Внутривенное введение</td>
+                                <td>300</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Внутрисуставное введение</td>
+                                <td>500</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>Введение лекарств внутривенно-капельно до 500 мл</td>
+                                <td>300</td>
+                            </tr>
+                        
+            </table>
+        </div>
+    </div>
+</div>
+        </div>
+    </section>
+
+
+    <section class="section" id="specialists">
+        <div class="section__info">
+            <h2 class="section__info__heading">Специалисты</h2>
+            <p class="section__info__paragraph">Наша клиника обладает мастерами своего дела и это подтверждается высоким рейтингом, сформированным из всех оценок наших клиентов за последний год.</p>
+        </div>
+        <div class="section__buttons">
+            <div class="section__buttons__switcher">
+                <button for-moving-block-id="specialists" move-direction="right"><</button>
+            </div>
+            <div class="section__buttons__buttons">
+                <div class="section__buttons__buttons__moving-block" moving-block-id="specialists">
+                    <button class="selected">Вет. фельдшеры</button><button >Вет. врачи</button><button >Руководитель</button>                </div>
+            </div>
+            <div class="section__buttons__switcher">
+                <button for-moving-block-id="specialists" move-direction="left">></button>
+            </div>
+        </div>
+        <div class="section__changing-content">
+            <div>    <div class="section__main-block--fr1-2">
+        <div class="section__main-block__block">
+            <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/doctors/ai_3_small.jpg');">
+                <img src="img/doctors/ai_3.jpg" alt="Изображение доктора" loading="lazy">
+            </div>
+        </div>
+        <div class="section__main-block__block">
+            <div class="section__main-block__block__wrapper">
+                <h3 class="section__main-block__block__wrapper__heading">Йогуртова Василиса </h3>
+                <p class="section__main-block__block__wrapper__paragraph"><b>Специализация:</b><br>
+                    Ветеринарный фельдшер-анестезиолог, дополнительная специализация - кардиолог.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Образование:</b><br>
+                    Окончила Великосельский аграрный колледж по специальности "Ветеринарный фельдшер" в 2018 году. В процессе обучения получила углубленные знания и практические навыки в области анестезиологии и кардиологии животных.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Рейтинг:</b> 4.50 на основании 2 отзыва(-ов).</p>
+
+                <p class="section__main-block__block__wrapper__paragraph">
+                    <a href="./specialist.php?id=1#reviews" class="section__main-block__block__link">Отзывы о специалисте</a>
+                </p>
+            </div>
+        </div>
+    </div>    <div class="section__main-block--fr1-2">
+        <div class="section__main-block__block">
+            <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/doctors/ai_4_small.jpg');">
+                <img src="img/doctors/ai_4.jpg" alt="Изображение доктора" loading="lazy">
+            </div>
+        </div>
+        <div class="section__main-block__block">
+            <div class="section__main-block__block__wrapper">
+                <h3 class="section__main-block__block__wrapper__heading">Кружкова Диана </h3>
+                <p class="section__main-block__block__wrapper__paragraph"><b>Специализация:</b><br>
+                    Ветеринарный фельдшер-терапевт, дополнительная специализация в области зоогигиены.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Образование:</b><br>
+                    Окончила Московский государственный аграрный университет имени К.А. Тимирязева по специальности "Ветеринарный фельдшер" в 2021 году.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Рейтинг:</b> нет.</p>
+
+                <p class="section__main-block__block__wrapper__paragraph">
+                    <a href="./specialist.php?id=2#reviews" class="section__main-block__block__link">Отзывы о специалисте</a>
+                </p>
+            </div>
+        </div>
+    </div></div><div>    <div class="section__main-block--fr1-2">
+        <div class="section__main-block__block">
+            <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/doctors/ai_1_small.jpg');">
+                <img src="img/doctors/ai_1.jpg" alt="Изображение доктора" loading="lazy">
+            </div>
+        </div>
+        <div class="section__main-block__block">
+            <div class="section__main-block__block__wrapper">
+                <h3 class="section__main-block__block__wrapper__heading">Свободова Ольга </h3>
+                <p class="section__main-block__block__wrapper__paragraph"><b>Специализация:</b><br>
+                    Терапевт, дерматолог, дополнительная специализация гастроэнтеролог.Окончила Костромскую ГСХА в 2008 году.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Образование:</b><br>
+                    Окончила Костромскую ГСХА в 2008 году.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Рейтинг:</b> 5.00 на основании 1 отзыва(-ов).</p>
+
+                <p class="section__main-block__block__wrapper__paragraph">
+                    <a href="./specialist.php?id=3#reviews" class="section__main-block__block__link">Отзывы о специалисте</a>
+                </p>
+            </div>
+        </div>
+    </div>    <div class="section__main-block--fr1-2">
+        <div class="section__main-block__block">
+            <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/doctors/ai_2_small.jpg');">
+                <img src="img/doctors/ai_2.jpg" alt="Изображение доктора" loading="lazy">
+            </div>
+        </div>
+        <div class="section__main-block__block">
+            <div class="section__main-block__block__wrapper">
+                <h3 class="section__main-block__block__wrapper__heading">Правоведова Дарина </h3>
+                <p class="section__main-block__block__wrapper__paragraph"><b>Специализация:</b><br>
+                    Хирург, стоматолог, вторая специализация офтальмология.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Образование:</b><br>
+                    В 2012 году окончила Вологодскую ГМХА, ветеринарный врач, хирург, стоматолог, дополнительная специализация офтальмолог.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Рейтинг:</b> нет.</p>
+
+                <p class="section__main-block__block__wrapper__paragraph">
+                    <a href="./specialist.php?id=4#reviews" class="section__main-block__block__link">Отзывы о специалисте</a>
+                </p>
+            </div>
+        </div>
+    </div>    <div class="section__main-block--fr1-2">
+        <div class="section__main-block__block">
+            <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/doctors/ai_5_small.jpg');">
+                <img src="img/doctors/ai_5.jpg" alt="Изображение доктора" loading="lazy">
+            </div>
+        </div>
+        <div class="section__main-block__block">
+            <div class="section__main-block__block__wrapper">
+                <h3 class="section__main-block__block__wrapper__heading">Мирова Полина </h3>
+                <p class="section__main-block__block__wrapper__paragraph"><b>Специализация:</b><br>
+                    Хирург, ортопед, дополнительная специализация рентгенолог.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Образование:</b><br>
+                    Окончила Вологодскую ГМХА в 2020 году.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Рейтинг:</b> нет.</p>
+
+                <p class="section__main-block__block__wrapper__paragraph">
+                    <a href="./specialist.php?id=5#reviews" class="section__main-block__block__link">Отзывы о специалисте</a>
+                </p>
+            </div>
+        </div>
+    </div></div><div>    <div class="section__main-block--fr1-2">
+        <div class="section__main-block__block">
+            <div class="hero__end__image-wrapper blur-load" style="background-image: url('img/doctors/ai_6_small.jpg');">
+                <img src="img/doctors/ai_6.jpg" alt="Изображение доктора" loading="lazy">
+            </div>
+        </div>
+        <div class="section__main-block__block">
+            <div class="section__main-block__block__wrapper">
+                <h3 class="section__main-block__block__wrapper__heading">Истомов Максим </h3>
+                <p class="section__main-block__block__wrapper__paragraph"><b>Специализация:</b><br>
+                    Ветеринарный врач хирург ортопед, дополнительные специализации неврология и реабилитация.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Образование:</b><br>
+                    Окончил СПб ГАВМ в 2015 году.
+                </p>
+
+                <p class="section__main-block__block__wrapper__paragraph"><b>Рейтинг:</b> нет.</p>
+
+                <p class="section__main-block__block__wrapper__paragraph">
+                    <a href="./specialist.php?id=6#reviews" class="section__main-block__block__link">Отзывы о специалисте</a>
+                </p>
+            </div>
+        </div>
+    </div></div>            
+
+        </div>
+        
+
+
+        
+
+
+
+
+        
+        
+    </section>
+
+
+    
+
+    
+    <span id="appointment_form"></span>
+    <div class="section-wrapper">
+
+        <section class="section">
+            <div class="section__info">
+                <h2 class="section__info__heading">Запись на приём</h2>
+                <p class="section__info__paragraph">Для записи на приём Вы можете позвонить, или написать нам по контактным данным ниже, или заполнить форму для обратного звонка.</p>
+            </div>
+            <div class="section__main-block--fr1-3">
+                <div class="section__main-block__block">
+                    <div class="section__main-block__block__wrapper" style="justify-content: flex-start;">
+                        <h3 class="section__main-block__block__wrapper__heading">Контактные данные</h3>
+                        <p class="section__main-block__block__wrapper__paragraph">
+                            <img src="img/icons/mobile_phone.png" class="section__main-block__block__wrapper__paragraph__icon"> +7 (999) 999 99-99<br/><img src="img/icons/tg.png" class="section__main-block__block__wrapper__paragraph__icon"> @northurljous                        </p>
+                        <div class="section__main-block__block__wrapper__buttons-block">
+                            <a href="tel:89999999999" class="section__main-block__block__wrapper__buttons-block__button--for-small btn">Позвонить</a><a href="https://t.me/northurljous" class="section__main-block__block__wrapper__buttons-block__button btn">Написать в тг</a>                            
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="section__main-block__block">
+                    <div class="section__main-block__block__wrapper">
+                        <h3 class="section__main-block__block__wrapper__heading">Обратный звонок</h3>
+                        <p class="section__main-block__block__wrapper__paragraph">Расписание работы операторов:<br/>Пн-Сб: 9:00-21:00<br/>Вс: 9:00-18:00<br/><br/>Время ожидания обратного звонка: до 15 минут.</p>
+                        <form class="section__main-block__block__wrapper__form" method="post">
+                            
+                                                        <div class="section__main-block__block__wrapper__form__fields" style="grid-template-columns: 1fr;">
+                                <div class="notification">Чтобы воспользоваться формой, пожалуйста, создайте (если нет) и войдите в аккаунт.</div>
+                            </div>
+                                
+                        </form>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    
+    
+    <footer class="footer">
+    <div class="footer__start-block">
+        © 2024 ВетХелп. Все права защищены.
+    </div>
+    <div class="footer__middle-block">
+        <a href="./privacy_policy.php" class="header-link">Политика конфиденциальности</a>
+        <a href="./rules.php" class="header-link">Правила пользования сайтом</a>
+        <a href="./#appointment_form" class="header-link">Контакты</a>
+    </div>
+</footer>    <!--<footer class="footer">
+        <div class="footer__start-block">
+            © 2024 ВетХелп. Все права защищены.
+        </div>
+        <div class="footer__middle-block">
+            <a class="header-link">Политика конфиденциальности</a>
+            <a class="header-link">Правила пользования сайтом</a>
+            <a href="./#appointment_form" class="header-link">Контакты</a>
+        </div>
+    </footer>-->
+
+    <script src="js/general/lazy_load.js"></script>
+
+    <script src="js/components/button_slider.js"></script>
+</body>
+</html>

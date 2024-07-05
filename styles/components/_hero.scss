@@ -1,0 +1,103 @@
+@use "../globals" as *;
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 59px);
+  display: grid;
+  padding: calc($largeGap * 2);
+  grid-template-rows: 1fr;
+  @include bp-down($medium) {
+    padding: $largeGap;
+  }
+  gap: $largeGap;
+  grid-template-columns: 1fr;
+
+  @include bp-up($large) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include bp-down($large) {
+    min-height: auto;
+  }
+
+  &__start {
+    @extend %flex-center;
+    justify-content: flex-start;
+    &__wrapper {
+      &--paragraph {
+        line-height: 150%;
+      }
+      &__buttons-block {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $largeGap;
+        &__button {
+          @extend %button;
+          border: 1px solid $green;
+          border-radius: $largeBorderRadius;
+          display: block;
+          padding: $regularGap $largeGap;
+        }
+      }
+    }
+  }
+
+  &__end {
+    border-radius: $largeBorderRadius;
+    @extend %flex-center;
+    border-radius: $largeBorderRadius;
+
+    &__image-wrapper {
+      border-radius: $largeBorderRadius;
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      height: clamp(300px, 30vw, 450px);
+      width: 100%;
+      @include bp-up($medium) {
+        max-height: none;
+      }
+      @include bp-up($small) {
+        max-height: clamp(300px, 30vw, 450px);
+      }
+      @include bp-down($small) {
+        min-height: 0;
+        max-height: none;
+      }
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.section-wrapper {
+  background-color: light-dark(lighten($green, 50%), darken($green, 38%));
+  border-block: 1px solid;
+  border-color: light-dark(lighten($green, 0%), darken($green, 10%));
+
+  $this: &;
+  &--light {
+    @extend #{$this};
+    border-color: light-dark(darken($gray, 10%), darken($gray, 10%));
+    background-color: light-dark(lighten($gray, 8%), darken($gray, 75%));
+  }
+
+  a, button {
+    border-color: darken($gray, 10%);
+
+  }
+}

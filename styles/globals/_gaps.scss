@@ -1,0 +1,46 @@
+$regularGap: 10px;
+$smallGap: calc($regularGap / 2);
+$largeGap: calc($regularGap * 2);
+$almostLargeGap: calc(($regularGap + $largeGap) / 2);
+
+button {
+  padding: $regularGap $largeGap;
+  margin: $regularGap;
+}
+
+div {
+  margin: 0;
+}
+
+.section {
+  padding: $smallGap $largeGap;
+  margin: $regularGap $largeGap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: 0 $largeGap;
+}
+
+p,
+a {
+  margin: 0;
+}
+
+p {
+  margin-bottom: $largeGap;
+}
+
+button {
+  padding: $regularGap $almostLargeGap;
+  margin: 0;
+}
+
+.btn {
+  @extend button;
+  color: initial !important;
+}

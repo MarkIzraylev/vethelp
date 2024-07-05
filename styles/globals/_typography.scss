@@ -1,0 +1,179 @@
+@use "colors" as c;
+@use "speeds" as s;
+@use "gaps" as *;
+@use "breakpoints" as *;
+@use "media_queries" as *;
+
+%roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%montserrat-regular {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%lora-regular {
+  font-family: "Lora", serif;
+}
+
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../fonts/Roboto/static/Roboto-Regular.ttf") format("truetype"),
+    url("../fonts/Roboto/static/Roboto-Medium.ttf") format("truetype"),
+    url("../fonts/Roboto/static/Roboto-Italic.ttf") format("truetype"),
+    url("../fonts/Roboto/static/Roboto-BoldItalic.ttf") format("truetype"),
+    url("../fonts/Roboto/static/Roboto-MediumItalic.ttf") format("truetype"),
+    url("../fonts/Roboto/static/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("../fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype"),
+    url("../fonts/Montserrat/static/Montserrat-Medium.ttf") format("truetype"),
+    url("../fonts/Montserrat/static/Montserrat-Italic.ttf") format("truetype"),
+    url("../fonts/Montserrat/static/Montserrat-SemiBold.ttf") format("truetype"),
+    url("../fonts/Montserrat/static/Montserrat-BoldItalic.ttf") format("truetype"),
+    url("../fonts/Montserrat/static/Montserrat-SemiBoldItalic.ttf") format("truetype"),
+    url("../fonts/Montserrat/static/Montserrat-MediumItalic.ttf") format("truetype"),
+    url("../fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lora";
+  src:
+    url("../fonts/Lora/static/Lora-Regular.ttf") format("truetype"),
+    url("../fonts/Lora/static/Lora-Medium.ttf") format("truetype"),
+    url("../fonts/Lora/static/Lora-Italic.ttf") format("truetype"),
+    url("../fonts/Lora/static/Lora-SemiBold.ttf") format("truetype"),
+    url("../fonts/Lora/static/Lora-BoldItalic.ttf") format("truetype"),
+    url("../fonts/Lora/static/Lora-SemiBoldItalic.ttf") format("truetype"),
+    url("../fonts/Lora/static/Lora-MediumItalic.ttf") format("truetype"),
+    url("../fonts/Lora/static/Lora-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Unbounded";
+  src: url("../fonts/Unbounded/static/Unbounded-Regular.ttf") format("truetype"),
+    url("../fonts/Unbounded/static/Unbounded-Medium.ttf") format("truetype"),
+    url("../fonts/Unbounded/static/Unbounded-Light.ttf") format("truetype"),
+    url("../fonts/Unbounded/static/Unbounded-SemiBold.ttf") format("truetype"),
+    url("../fonts/Unbounded/static/Unbounded-ExtraLight.ttf") format("truetype"),
+    url("../fonts/Unbounded/static/Unbounded-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Unbounded/static/Unbounded-Black.ttf") format("truetype"),
+    url("../fonts/Unbounded/static/Unbounded-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSansMono";
+  src:
+    url("../fonts/Noto_Sans_Mono/static/NotoSansMono-Regular.ttf") format("truetype"),
+    url("../fonts/Noto_Sans_Mono/static/NotoSansMono-Medium.ttf") format("truetype"),
+    url("../fonts/Noto_Sans_Mono/static/NotoSansMono-Light.ttf") format("truetype"),
+    url("../fonts/Noto_Sans_Mono/static/NotoSansMono-SemiBold.ttf") format("truetype"),
+    url("../fonts/Noto_Sans_Mono/static/NotoSansMono-ExtraLight.ttf") format("truetype"),
+    url("../fonts/Noto_Sans_Mono/static/NotoSansMono-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Noto_Sans_Mono/static/NotoSansMono-Black.ttf") format("truetype"),
+    url("../fonts/Noto_Sans_Mono/static/NotoSansMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src:
+    url("../fonts/Noto_Sans/static/NotoSans-Regular.ttf") format("truetype"),
+    url("../fonts/Noto_Sans/static/NotoSans-Medium.ttf") format("truetype"),
+    url("../fonts/Noto_Sans/static/NotoSans-Light.ttf") format("truetype"),
+    url("../fonts/Noto_Sans/static/NotoSans-SemiBold.ttf") format("truetype"),
+    url("../fonts/Noto_Sans/static/NotoSans-ExtraLight.ttf") format("truetype"),
+    url("../fonts/Noto_Sans/static/NotoSans-ExtraBold.ttf") format("truetype"),
+    url("../fonts/Noto_Sans/static/NotoSans-Black.ttf") format("truetype"),
+    url("../fonts/Noto_Sans/static/NotoSans-Bold.ttf") format("truetype");
+}
+
+
+%unbounded-regular {
+  font-family: "Unbounded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %unbounded-regular;
+}
+
+h1 {
+  font-size: clamp(36px, 5vw, 42px);
+}
+
+h2 {
+  font-size: clamp(24px, 4.5vw, 30px);
+}
+
+h3 {
+  font-size: clamp(12px, 4vw, 18px);
+}
+
+p,
+div,
+a,
+button {
+  font-family: "NotoSans", serif;
+  font-size: clamp(18px, calc(45px - 2vw), 21px);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: c.$green;
+    transition: s.$fast;
+  }
+}
+
+.list {
+  padding: 0;
+  li {
+    list-style: none;
+  }
+  li::before {
+    background-image: url('../img/icons/paw_print.png');
+    background-size: cover;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin-right: $regularGap;
+  }
+  
+  gap: $regularGap;
+  $this: &;
+  &--2col {
+    @extend #{$this};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include bp-down($small) {
+      grid-template-columns: 1fr;
+
+    }
+  }
+}
+
+.underlined_link {
+  text-underline-offset: $smallGap !important;
+  text-decoration: underline !important;
+  text-decoration-color: c.$green !important;
+}

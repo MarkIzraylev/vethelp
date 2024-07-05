@@ -1,0 +1,431 @@
+@use "../globals" as *;
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  padding: calc($largeGap * 2);
+  //margin-bottom: $largeGap;
+  @include bp-down($medium) {
+    padding: $largeGap;
+  }
+  gap: $largeGap;
+  flex-direction: column;
+  border-radius: $largeBorderRadius;
+  $this: &;
+  &--green {
+    border: 1px solid $green;
+
+    @extend #{$this};
+    background-color: light-dark(lighten($green, 50%), darken($green, 38%));
+  }
+  &--blue {
+    border: 1px solid $green;
+
+    @extend #{$this};
+    background-color: light-dark(lighten($blue, 60%), darken($green, 38%));
+  }
+  &--yellow {
+    border: 1px solid $green;
+
+    @extend #{$this};
+    background-color: light-dark(lighten($yellow, 35%), darken($green, 38%));
+    border-color: light-dark(
+      lighten($yellow, 10%),
+      darken($green, 38%)
+    ) !important;
+
+    button,
+    a,
+    input[type="checkbox"] {
+      background-color: light-dark(
+        lighten($yellow, 40%),
+        darken($green, 38%)
+      ) !important;
+
+      border-color: light-dark(
+        lighten($yellow, 10%),
+        darken($green, 38%)
+      ) !important;
+    }
+    button:hover,
+    a:hover,
+    input[type="checkbox"]:hover {
+      background: light-dark(
+        lighten($yellow, 25%),
+        darken($green, 38%)
+      ) !important;
+      border-color: light-dark(
+        darken($yellow, 10%),
+        darken($green, 38%)
+      ) !important;
+    }
+  }
+
+  &__buttons {
+    display: grid;
+    grid-template-columns: calc($largeGap + $regularGap * 2) 1fr calc(
+        $largeGap + $regularGap * 2
+      );
+    align-items: center;
+    max-width: 100%;
+    gap: $largeGap;
+    flex-wrap: nowrap;
+    &__buttons {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      &__moving-block {
+        //margin-left: -30px;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        gap: $largeGap;
+        button {
+          width: auto;
+          text-wrap: nowrap;
+          border: 1px solid $green;
+          border-radius: $largeBorderRadius;
+          @extend %button;
+          &.selected {
+            background: light-dark(lighten($green, 40%), darken($green, 25%));
+          }
+        }
+      }
+    }
+    &__switcher {
+      button {
+        width: calc($largeGap + $regularGap * 2);
+        height: calc($largeGap + $regularGap * 2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $green;
+        @extend %circleButton;
+        &.disabled {
+          border-color: $gray;
+          color: $gray;
+          cursor: default;
+          &:hover {
+            background: none !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    &__paragraph {
+      margin-bottom: 0;
+    }
+  }
+
+  &__main-block {
+    //@extend %flex-center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+
+    gap: $largeGap;
+
+    @include bp-down($large) {
+      display: flex;
+      flex-direction: column;
+      display: grid;
+      grid-template-columns: 1fr !important;
+      grid-template-rows: auto auto;
+    }
+
+    $this: &;
+    &--fr1-3 {
+      @extend #{$this};
+      grid-template-columns: 1fr 3fr;
+    }
+
+    &--fr1-2 {
+      @extend #{$this};
+      grid-template-columns: 1fr 2fr;
+      //flex-direction: column;
+    }
+
+    &--fr1-1 {
+      @extend #{$this};
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__block {
+      $this: &;
+      &--review {
+        @extend #{$this};
+        height: clamp(300px, 30vw, 450px);
+        display: grid;
+        grid-template-rows: 1fr calc($largeGap * 2);
+
+        @include bp-up($small) {
+          max-height: clamp(300px, 30vw, 450px);
+        }
+        & > :first-child {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          
+        }
+
+
+        & > :last-child {
+          padding-top: $regularGap;
+          display: none;
+        }
+
+        &:focus-within {
+          height: auto !important;
+          max-height: none !important;
+          grid-template-rows: 1fr;
+
+          & > :last-child {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            padding: 0;
+          }
+        }
+
+        
+
+      }
+
+      &__link {
+        width: auto;
+        text-wrap: nowrap;
+        border: 1px solid $green;
+        border-radius: $largeBorderRadius;
+        @extend %button;
+        padding: $regularGap $largeGap;
+        width: fit-content;
+        display: inline-block;
+        &.selected {
+          background: light-dark(lighten($green, 40%), darken($green, 25%));
+        }
+        &.disabled {
+          border-color: $gray;
+          cursor: default;
+          color: gray;
+          &:hover {
+            background: none !important;
+          }
+        }
+      }
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        $this: &;
+        &--justify-start {
+          @extend #{$this};
+          justify-content: flex-start;
+        }
+        height: 100%;
+        table {
+          border-collapse: separate;
+          border-spacing: 0;
+          width: 100%;
+          height: 100%;
+          text-align: left;
+          direction: ltr;
+          border: 1px solid $green;
+          border-radius: $largeBorderRadius + 1.5px;
+
+          & tr:nth-child(1) {
+            background-color: light-dark(
+              lighten($green, 40%),
+              darken($green, 25%)
+            );
+          }
+          th,
+          td {
+            padding: $regularGap $largeGap;
+            border: 1px solid $green;
+          }
+          th {
+            font-family: "Unbounded";
+            font-weight: 400;
+          }
+          th:last-child,
+          td:last-child {
+            width: 50px;
+          }
+          tr:first-child {
+            height: $largeGap * 3;
+            & th:first-child,
+            td:first-child {
+              border-top-left-radius: $largeBorderRadius;
+            }
+            & th:last-child,
+            td:last-child {
+              border-top-right-radius: $largeBorderRadius;
+            }
+          }
+          tr:last-child {
+            & th:first-child,
+            td:first-child {
+              border-bottom-left-radius: $largeBorderRadius;
+            }
+            & th:last-child,
+            td:last-child {
+              border-bottom-right-radius: $largeBorderRadius;
+            }
+          }
+        }
+        &__paragraph {
+          line-height: 150%;
+          &__icon {
+            width: $largeGap;
+            vertical-align: middle;
+            //background-color: light-dark(none, $white);
+            //border-radius: $smallBorderRadius;
+            background-color: invert(100%);
+          }
+        }
+        &__form {
+          &__fields {
+            display: grid;
+            gap: $largeGap;
+            grid-template-columns: 1fr 1fr;
+            
+            $this: &;
+            &--3cols {
+              @extend #{$this};
+              grid-template-columns: 1fr 1fr 1fr;
+              @include bp-down($largest) {
+                grid-template-columns: 1fr 1fr;
+              }
+              @include bp-down($large) {
+                grid-template-columns: 1fr;
+              }
+            }
+            margin-bottom: $largeGap;
+            @include bp-down($medium) {
+              grid-template-columns: 1fr;
+            }
+            &__field {
+              outline: none;
+              @extend button;
+              border-radius: $largeBorderRadius;
+              border: 1px solid $gray;
+            }
+          }
+          &__agreement {
+            margin-bottom: $largeGap;
+            display: block;
+            a {
+              text-underline-offset: $smallGap;
+              text-decoration: underline;
+              text-decoration-color: $green;
+            }
+            input[type="checkbox"] {
+              padding: calc($smallGap / 2);
+              appearance: none;
+              outline: none;
+              content: none;
+              border: 1px solid light-dark($gray, black);
+              //@extend %circleButton;
+              border-radius: $smallBorderRadius;
+              background: $white;
+
+              vertical-align: middle;
+              margin-right: $smallGap;
+              margin-bottom: $smallGap;
+              margin-left: 0;
+              margin-top: 0;
+
+              &:hover {
+                background-color: light-dark(
+                  lighten($green, 50%),
+                  darken($gray, 10%)
+                );
+                border-color: $green;
+              }
+            }
+
+            input[type="checkbox"]:before {
+              content: "";
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: $almostLargeGap;
+              height: $almostLargeGap;
+            }
+
+            input[type="checkbox"]:checked:before {
+              color: black !important;
+              content: "";
+
+              background-image: url("./../img/icons/check.png");
+              background-position: center;
+              background-size: cover;
+            }
+          }
+          &__buttons-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: $largeGap;
+            &__button {
+              @extend %button;
+              border: 1px solid $green;
+              border-radius: $largeBorderRadius;
+            }
+          }
+        }
+        &__buttons-block {
+          display: flex;
+          flex-wrap: wrap;
+          gap: $largeGap;
+          &__button {
+            @extend %button;
+            border: 1px solid $green;
+            border-radius: $largeBorderRadius;
+            $this: &;
+            &--for-small {
+              @extend #{$this};
+              @include bp-up($largest) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__changing-content {
+    & > div:nth-child(n) {
+      display: none;
+    }
+    & > div > div:nth-child(2n) {
+      text-align: right;
+      @include bp-down($large) {
+        text-align: left;
+      }
+    }
+    & > div:nth-child(1) {
+      display: grid;
+    }
+    & > div {
+      display: flex;
+      gap: $largeGap;
+    }
+    & > div > div:nth-child(2n) {
+      direction: rtl;
+    }
+
+    & > div > div > div:nth-child(2n) {
+      direction: ltr;
+    }
+  }
+}

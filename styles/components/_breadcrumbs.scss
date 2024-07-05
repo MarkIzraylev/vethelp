@@ -1,0 +1,17 @@
+@use '../globals' as *;
+
+.breadcrumbs {
+    display: flex;
+    //gap: $regularGap;
+    //padding-inline: $regularGap;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.breadcrumbs__block:not(:last-child)::after {
+    content: ">";
+    margin-inline: $regularGap
+    //margin-right: $smallGap;
+}
+.breadcrumbs__block {
+    display: flex; // eliminates the gap between bredcrumbs divider and a pagename
+}
