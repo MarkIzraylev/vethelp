@@ -12,7 +12,7 @@ A secure and responsive veterinary clinic website that allows users to sign up a
 [The logical structure](img/logical_structure.png) is provided on both Russian and English languages.
 
 ## Client
-### Tech used: JavaScript, jQuery, SCSS, lazy loading
+### Tech used: JavaScript, jQuery, SCSS, lazy loading, BEM, semantic layout
 
 The jQuery library was used to easier maipulate DOM objects. The functionality of the following interactive elements has been implemented:
 * Appearance and hiding of preloaders to implement “lazy loading” functionality.
@@ -40,3 +40,6 @@ To temporarily save data of an authorized user when navigating through the pages
 
 #### Password encryption. Protection against SQL injections in practice. Basic user authorization code
 To ensure the security of user accounts, a “one-way” encryption system was used for passwords using the PHP function password_hash(), the first argument of which is the password that needs to be encrypted, and the second argument is the PASSWORD_DEFAULT constant, allowing the use of modern encryption algorithms. When a user is authorized, the encrypted password entered at login is compared with the “hash” of the password entered during registration, and if they match with the login entered correctly, the account is logged in. To verify passwords, the PHP function password_verify() is used. Thus, if the database is hacked, passwords will not be available to fraudsters.
+
+## Ideas for further project development
+Expanding the functionality of a personal account, as well as adding an article section might be a great notions on the further development of the project.
