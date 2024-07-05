@@ -11,7 +11,7 @@ A secure and responsive veterinary clinic website that allows users to sign up a
 ## Site's logical structure
 Provided on both Russian and English languages.
 
-[a relative link](logical_structure.png)
+[Site's logical structure](img/logical_structure.png)
 
 ## Client
 ### Tech used: JavaScript, jQuery, SCSS, lazy loading
