@@ -9,9 +9,7 @@ A secure and responsive veterinary clinic website that allows users to sign up a
 3. Go to [your host name]/[path to the project files]/index.php page in a browser.
 
 ## Site's logical structure
-Provided on both Russian and English languages.
-
-[Site's logical structure](img/logical_structure.png)
+[The logical structure](img/logical_structure.png) is provided on both Russian and English languages.
 
 ## Client
 ### Tech used: JavaScript, jQuery, SCSS, lazy loading
