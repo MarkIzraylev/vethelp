@@ -11,7 +11,7 @@ A secure and responsive veterinary clinic website that allows users to sign up a
 ## Site's logical structure
 Provided on both Russian and English languages.
 
-![image](https://github.com/MarkIzraylev/vethelp/assets/68638924/0a621ff2-364c-49c0-aa1c-08d89510ffd3)
+![image](https://github.com/MarkIzraylev/vethelp/assets/68638924/9e1235f6-1c4b-4289-9429-3c2e045d334b)
 
 ## Client
 ### Tech used: JavaScript, jQuery, SCSS, lazy loading
