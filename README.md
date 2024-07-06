@@ -4,8 +4,8 @@ A secure and responsive veterinary clinic website that allows users to sign up a
 ![image](https://github.com/MarkIzraylev/vethelp/assets/68638924/a81cea73-205e-4452-b8e1-c3698f6fadce)
 
 ## How to run the website
-1. Import vethelp.sql file as a database dump on your PHP server (e.g., PHPMyAdmin).
-2. Run a host for the website (e.g., localhost via XAMPP).
+1. Run a host for the website (e.g., localhost via XAMPP).
+2. Import vethelp.sql file as a database dump on your PHP server (e.g., PHPMyAdmin).
 3. Go to [your host name]/[path to the project files]/index.php page in a browser.
 
 ## Site's logical structure
@@ -38,8 +38,8 @@ There is a piece of code in the site header that allows you to show only the nam
 #### Using sessions
 To temporarily save data of an authorized user when navigating through the pages of the site, PHP sessions were used. By default, the session lifetime is 24 minutes. The values ​​recorded in sessions are stored on the server, so the user does not have access to them until this access is provided by the developer.
 
-#### Password encryption. Protection against SQL injections in practice. Basic user authorization code
-To ensure the security of user accounts, a “one-way” encryption system was used for passwords using the PHP function password_hash(), the first argument of which is the password that needs to be encrypted, and the second argument is the PASSWORD_DEFAULT constant, allowing the use of modern encryption algorithms. When a user is authorized, the encrypted password entered at login is compared with the “hash” of the password entered during registration, and if they match with the login entered correctly, the account is logged in. To verify passwords, the PHP function password_verify() is used. Thus, if the database is hacked, passwords will not be available to fraudsters.
+#### Password encryption
+To ensure the security of user accounts, a one-way encryption system was used for passwords using the PHP function password_hash(), the first argument of which is the password that needs to be encrypted, and the second argument is the PASSWORD_DEFAULT constant, allowing the use of modern encryption algorithms. When a user is authorized, the encrypted password entered at login is compared with the “hash” of the password entered during registration, and if they match with the login entered correctly, the account is logged in. To verify passwords, the PHP function password_verify() is used. Thus, if the database is hacked, passwords will not be available to fraudsters.
 
 ## Ideas for further project development
 Expanding the functionality of a personal account, as well as adding an article section might be some great notions on the further development of the project.
